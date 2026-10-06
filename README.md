@@ -7,7 +7,23 @@
 [![scikit--learn](https://img.shields.io/badge/scikit--learn-1.5+-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Zero-Cost Deployment](https://img.shields.io/badge/Deploy%20Free-%240%20Hugging%20Face%20Spaces-FFD21E?logo=huggingface&logoColor=black)](#-free-live-demo-deployment-0-cost)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-satellite--intelligence-00E5FF?style=for-the-badge&logo=render&logoColor=white)](https://satellite-intelligence-zv6c.onrender.com)
+[![Status](https://img.shields.io/badge/Status-Operational%20%E2%9C%94-00E676?style=for-the-badge)](https://satellite-intelligence-zv6c.onrender.com)
+
+---
+
+## 🚀 Live Interactive Platform
+
+Experience the full autonomous Earth Observation dashboard live in your browser:
+
+### 🌐 **[https://satellite-intelligence-zv6c.onrender.com](https://satellite-intelligence-zv6c.onrender.com)**
+
+> **Live Deployment Highlights:**
+> * 🛰️ **3D Live Earth & LEO Constellations:** Real-time procedural 3D globe with 650+ satellites.
+> * 🗺️ **1:1 Official Indian Geospatial Vectors:** Hardware-accelerated boundary mapping with zero lag.
+> * 🔬 **Radiometric Indices & Climate Telemetry:** Instant calculation of NDVI, NDWI, EVI, SAVI, NDBI, NBR, and LST.
+> * 🤖 **ML Outlier & Zonation Engine:** Real-time Isolation Forest anomaly detection and K-Means environmental clusters.
+> * ⚡ **DuckDB OLAP Core:** Sub-millisecond analytical queries served directly via FastAPI.
 
 ---
 
@@ -88,108 +104,9 @@ flowchart TD
 
 ---
 
-## 🚀 Free Live Demo Deployment ($0 Cost)
-
-You can launch a public, permanent live demo of this dashboard with **zero server costs ($0)** using one of the following methods:
-
-### Option A: Hugging Face Spaces (Recommended — 100% Free, Zero Card Required)
-
-Hugging Face Spaces provides 100% free hosting with 16GB RAM and 2 vCPUs:
-
-1. Create a free account at [huggingface.co](https://huggingface.co).
-2. Click **New Space** ([huggingface.co/new-space](https://huggingface.co/new-space)).
-3. Name your space (e.g. `satellite-intelligence-india`).
-4. Select **Docker** as the Space SDK and choose **Blank**.
-5. Choose **Public** and click **Create Space**.
-6. Clone your Space repository or push this repository's code to Hugging Face:
-   ```bash
-   git remote add space https://huggingface.co/spaces/<your-username>/satellite-intelligence-india
-   git push space main
-   ```
-7. Hugging Face will automatically detect the bundled `Dockerfile`, build the image, and provide a live public HTTPS URL (e.g. `https://<your-username>-satellite-intelligence-india.hf.space`).
-
----
-
-### Option B: Render.com (Free Web Service)
-
-1. Create a free account at [render.com](https://render.com).
-2. Click **New +** -> **Web Service**.
-3. Connect your GitHub repository.
-4. Set the following settings:
-   * **Runtime:** `Python 3` (or `Docker`)
-   * **Build Command:** `pip install -r requirements.txt`
-   * **Start Command:** `python satellite_intelligence.py`
-5. Click **Create Web Service**. Your dashboard is live at `https://<service-name>.onrender.com`!
-
----
-
-### Option C: GitHub Codespaces (1-Click Instant Browser Run)
-
-Every GitHub user receives 60 free hours of GitHub Codespaces per month:
-1. In your GitHub repository, click the green **Code** button.
-2. Select the **Codespaces** tab and click **Create codespace on main**.
-3. In the terminal, run:
-   ```bash
-   pip install -r requirements.txt
-   python satellite_intelligence.py
-   ```
-4. A notification will pop up: *"Your application running on port 8000 is available"*. Click **Open in Browser** to view the live dashboard!
-
----
-
-## 💻 Local Quickstart
-
-### Prerequisites
-* Python 3.10, 3.11, or 3.12
-* Git
-
-### Step-by-Step Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/satellite-intelligence.git
-cd satellite-intelligence
-
-# 2. Create and activate a virtual environment
-# Windows (PowerShell):
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-
-# Linux / macOS:
-python3 -m venv .venv
-source .venv/bin/activate
-
-# 3. Install verified dependencies
-pip install -r requirements.txt
-
-# 4. (Optional) Configure environment
-cp .env.example .env
-
-# 5. Launch the platform
-python satellite_intelligence.py
-```
-
-Open your browser at **`http://localhost:8000`** to access the live dashboard.
-
----
-
-## 🐳 Docker Deployment
-
-Run anywhere with the included production Dockerfile:
-
-```bash
-# Build the Docker image
-docker build -t satellite-intelligence:latest .
-
-# Run the container on port 8000
-docker run -d -p 8000:8000 --name satellite-platform satellite-intelligence:latest
-```
-
----
-
 ## 📡 REST API Reference
 
-The platform includes a self-documenting FastAPI REST interface. Interactive OpenAPI documentation is accessible at **`http://localhost:8000/docs`**.
+The platform includes a self-documenting FastAPI REST interface. Interactive OpenAPI documentation is accessible at **`https://satellite-intelligence-zv6c.onrender.com/docs`**.
 
 | Endpoint | Method | Description | Key Parameters |
 | :--- | :--- | :--- | :--- |
