@@ -1,0 +1,18 @@
+# Core Web Framework & ASGI Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# Analytical Database & Data Processing
+duckdb>=1.1.0
+pandas>=2.2.0
+numpy>=1.26.0,<3.0.0
+pyarrow>=17.0.0
+
+# Machine Learning & Scientific Computing
+scikit-learn>=1.5.0
+scipy>=1.13.0
+
+# Validation & Utilities
+pydantic>=2.8.0
+python-dateutil>=2.9.0
+python-dotenv>=1.0.0
